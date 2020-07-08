@@ -56,9 +56,9 @@ namespace Vision_inspection
                 //显示图像
                 HOperatorSet.DispObj(ho_Image, HDevWindowStack.GetActive());
             }
-            
-            
 
+
+            label8.Text = ha_isfangda.ToString();
             //获取日期+时间
             date_time.Text = DateTime.Now.ToString();
         }

@@ -38,11 +38,33 @@ namespace Vision_inspection
             Form1.setForm1.ha_windos_1.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
             Form1.setForm1.ha_windos_2.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
             Form1.setForm1.ha_windos_3.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
-
-
             //重置图像显示区域的大小
             HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width / 2 - 3, Form1.setForm1.ha_windos_box.Height / 2 - 1);
-
+            
+            if (Form1.setForm1.ha_wind0_isfangda)
+            {
+                fangda("ha_windos_0", false);
+                //重置图像显示区域的大小
+                HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
+            }
+            if (Form1.setForm1.ha_wind1_isfangda)
+            {
+                fangda("ha_windos_1", false);
+                //重置图像显示区域的大小
+                HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
+            }
+            if (Form1.setForm1.ha_wind2_isfangda)
+            {
+                fangda("ha_windos_2", false);
+                //重置图像显示区域的大小
+                HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
+            }
+            if (Form1.setForm1.ha_wind3_isfangda)
+            {
+                fangda("ha_windos_3", false);
+                //重置图像显示区域的大小
+                HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
+            }
         }
         /// <summary>
         /// 单击后放大所选窗口
@@ -68,7 +90,7 @@ namespace Vision_inspection
                         Form1.setForm1.ha_windos_1.Visible = true;
                         Form1.setForm1.ha_windos_2.Visible = true;
                         Form1.setForm1.ha_windos_3.Visible = true;
-                        Form1.setForm1.ha_wind0_isfangda = true;
+                        Form1.setForm1.ha_wind0_isfangda = false;
                         return isfangda = false;
                     }
                     else
@@ -81,7 +103,7 @@ namespace Vision_inspection
                         Form1.setForm1.ha_windos_1.Visible = false;
                         Form1.setForm1.ha_windos_2.Visible = false;
                         Form1.setForm1.ha_windos_3.Visible = false;
-                        Form1.setForm1.ha_wind0_isfangda = false;
+                        Form1.setForm1.ha_wind0_isfangda = true;
                         return isfangda = true;
                     }
                     break;
@@ -97,6 +119,7 @@ namespace Vision_inspection
                         Form1.setForm1.ha_windos_0.Visible = true;
                         Form1.setForm1.ha_windos_2.Visible = true;
                         Form1.setForm1.ha_windos_3.Visible = true;
+                        Form1.setForm1.ha_wind1_isfangda = false;
                         return isfangda = false;
                     }
                     else
@@ -109,6 +132,7 @@ namespace Vision_inspection
                         Form1.setForm1.ha_windos_0.Visible = false;
                         Form1.setForm1.ha_windos_2.Visible = false;
                         Form1.setForm1.ha_windos_3.Visible = false;
+                        Form1.setForm1.ha_wind1_isfangda = true;
                         return isfangda = true;
                     }
                     break;
@@ -123,6 +147,7 @@ namespace Vision_inspection
                         Form1.setForm1.ha_windos_0.Visible = true;
                         Form1.setForm1.ha_windos_1.Visible = true;
                         Form1.setForm1.ha_windos_3.Visible = true;
+                        Form1.setForm1.ha_wind2_isfangda = false;
                         return isfangda = false;
                     }
                     else
@@ -135,6 +160,7 @@ namespace Vision_inspection
                         Form1.setForm1.ha_windos_0.Visible = false;
                         Form1.setForm1.ha_windos_1.Visible = false;
                         Form1.setForm1.ha_windos_3.Visible = false;
+                        Form1.setForm1.ha_wind2_isfangda = true;
                         return isfangda = true;
                     }
                     break;
@@ -149,6 +175,7 @@ namespace Vision_inspection
                         Form1.setForm1.ha_windos_0.Visible = true;
                         Form1.setForm1.ha_windos_1.Visible = true;
                         Form1.setForm1.ha_windos_2.Visible = true;
+                        Form1.setForm1.ha_wind3_isfangda = false;
                         return isfangda = false;
                     }
                     else
@@ -161,6 +188,7 @@ namespace Vision_inspection
                         Form1.setForm1.ha_windos_0.Visible = false;
                         Form1.setForm1.ha_windos_1.Visible = false;
                         Form1.setForm1.ha_windos_2.Visible = false;
+                        Form1.setForm1.ha_wind3_isfangda = true;
                         return isfangda = true;
                     }
                     break;
