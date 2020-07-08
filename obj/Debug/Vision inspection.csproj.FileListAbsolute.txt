@@ -37,3 +37,15 @@ C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\Debug\V
 C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\Debug\Vision inspection.csproj.CopyComplete
 C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\Debug\Vision inspection.exe
 C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\Debug\Vision inspection.pdb
+D:\桌面\Vision-inspection\bin\Debug\Vision inspection.exe
+D:\桌面\Vision-inspection\bin\Debug\Vision inspection.pdb
+D:\桌面\Vision-inspection\bin\Debug\halcondotnet.dll
+D:\桌面\Vision-inspection\bin\Debug\halcondotnet.xml
+D:\桌面\Vision-inspection\obj\Debug\Vision inspection.csprojAssemblyReference.cache
+D:\桌面\Vision-inspection\obj\Debug\Vision_inspection.Form1.resources
+D:\桌面\Vision-inspection\obj\Debug\Vision_inspection.Properties.Resources.resources
+D:\桌面\Vision-inspection\obj\Debug\Vision inspection.csproj.GenerateResource.cache
+D:\桌面\Vision-inspection\obj\Debug\Vision inspection.csproj.CoreCompileInputs.cache
+D:\桌面\Vision-inspection\obj\Debug\Vision inspection.csproj.CopyComplete
+D:\桌面\Vision-inspection\obj\Debug\Vision inspection.exe
+D:\桌面\Vision-inspection\obj\Debug\Vision inspection.pdb

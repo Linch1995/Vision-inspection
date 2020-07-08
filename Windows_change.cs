@@ -20,38 +20,24 @@ namespace Vision_inspection
         /// <param name="height">当前主窗口的高度</param>
         public void change(int width, int height)
         {
-            int ha_box_w = Form1.setForm1.ha_windos_box.Width;
-            int ha_box_h = Form1.setForm1.ha_windos_box.Height;
+
             //改变四个ha_windows窗口容器的大小
             Form1.setForm1.ha_windos_box.Width = width - Form1.setForm1.camera_set.Width;
             Form1.setForm1.ha_windos_box.Height = height - 30;
             //改变右下角信息列表的高度
             Form1.setForm1.info_list.Height = height - Form1.setForm1.camera_set.Height - 45;
 
-            if (Form1.setForm1.ha_isfangda)
-            {
-                if (Form1.setForm1.ha_wind0_isfangda)
-                {
-                    Form1.setForm1.ha_windos_0.Width = ha_box_w;
-                    Form1.setForm1.ha_windos_0.Height = ha_box_h;
-                }
+            //改变四个图像窗口的宽度
+            Form1.setForm1.ha_windos_0.Width = Form1.setForm1.ha_windos_box.Width / 2 - 3;
+            Form1.setForm1.ha_windos_1.Width = Form1.setForm1.ha_windos_box.Width / 2 - 3;
+            Form1.setForm1.ha_windos_2.Width = Form1.setForm1.ha_windos_box.Width / 2 - 3;
+            Form1.setForm1.ha_windos_3.Width = Form1.setForm1.ha_windos_box.Width / 2 - 3;
 
-            }
-            else
-            {
-                //改变四个图像窗口的宽度
-                Form1.setForm1.ha_windos_0.Width = ha_box_w / 2 - 3;
-                Form1.setForm1.ha_windos_1.Width = ha_box_w / 2 - 3;
-                Form1.setForm1.ha_windos_2.Width = ha_box_w / 2 - 3;
-                Form1.setForm1.ha_windos_3.Width = ha_box_w / 2 - 3;
-
-                //改变四个图像窗口的高度
-                Form1.setForm1.ha_windos_0.Height = ha_box_h / 2 - 1;
-                Form1.setForm1.ha_windos_1.Height = ha_box_h / 2 - 1;
-                Form1.setForm1.ha_windos_2.Height = ha_box_h / 2 - 1;
-                Form1.setForm1.ha_windos_3.Height = ha_box_h / 2 - 1;
-            }
-
+            //改变四个图像窗口的高度
+            Form1.setForm1.ha_windos_0.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
+            Form1.setForm1.ha_windos_1.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
+            Form1.setForm1.ha_windos_2.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
+            Form1.setForm1.ha_windos_3.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
 
 
             //重置图像显示区域的大小
