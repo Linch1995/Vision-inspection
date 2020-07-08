@@ -30,9 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "",
+            "111",
+            "222"}, 6, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134))));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "1",
+            "000",
+            "222",
+            "222"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            "2",
+            "1",
+            "2",
+            "3"}, -1);
             this.ha_windos_0 = new HalconDotNet.HWindowControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ha_windos_1 = new HalconDotNet.HWindowControl();
@@ -70,6 +81,9 @@
             this.ha_windos_box = new System.Windows.Forms.Panel();
             this.ha_windos_box_info = new System.Windows.Forms.Label();
             this.info_list = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.camera_set.SuspendLayout();
             this.camera_set_init.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -363,6 +377,8 @@
             this.imageList1.Images.SetKeyName(3, "scan.png");
             this.imageList1.Images.SetKeyName(4, "shutter.png");
             this.imageList1.Images.SetKeyName(5, "shutter-outlined.png");
+            this.imageList1.Images.SetKeyName(6, "NG.png");
+            this.imageList1.Images.SetKeyName(7, "OK.png");
             // 
             // toolStrip1
             // 
@@ -503,6 +519,10 @@
             // info_list
             // 
             this.info_list.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.info_list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
             this.info_list.HideSelection = false;
             this.info_list.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
@@ -512,8 +532,28 @@
             this.info_list.Margin = new System.Windows.Forms.Padding(0);
             this.info_list.Name = "info_list";
             this.info_list.Size = new System.Drawing.Size(289, 236);
+            this.info_list.SmallImageList = this.imageList1;
             this.info_list.TabIndex = 11;
             this.info_list.UseCompatibleStateImageBehavior = false;
+            this.info_list.View = System.Windows.Forms.View.Details;
+            this.info_list.ColumnWidthChanged += new System.Windows.Forms.ColumnWidthChangedEventHandler(this.info_list_ColumnWidthChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "NG/OK";
+            this.columnHeader1.Width = 42;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "序号";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 42;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "扫描结果";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 200;
             // 
             // Form1
             // 
@@ -595,6 +635,9 @@
         public HalconDotNet.HWindowControl ha_windos_1;
         public HalconDotNet.HWindowControl ha_windos_2;
         public HalconDotNet.HWindowControl ha_windos_3;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 
