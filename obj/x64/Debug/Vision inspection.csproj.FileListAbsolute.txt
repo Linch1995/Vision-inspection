@@ -1,0 +1,5 @@
+C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\x64\Debug\Vision inspection.csprojAssemblyReference.cache
+C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\x64\Debug\Vision_inspection.Form1.resources
+C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\x64\Debug\Vision_inspection.Properties.Resources.resources
+C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\x64\Debug\Vision inspection.csproj.GenerateResource.cache
+C:\Users\Administrator\Source\Workspaces\工作区\Vision inspection\obj\x64\Debug\Vision inspection.csproj.CoreCompileInputs.cache
