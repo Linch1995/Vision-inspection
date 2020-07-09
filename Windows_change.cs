@@ -13,6 +13,7 @@ namespace Vision_inspection
     /// </summary>
     class Windows_change
         {
+        bool camera_lianjie_0 = false;
         /// <summary>
         /// 改变窗体大小后改变里面控件大小
         /// </summary>
@@ -46,26 +47,20 @@ namespace Vision_inspection
             if (Form1.setForm1.ha_wind0_isfangda)
             {
                 fangda("ha_windos_0", false);
-                //重置图像显示区域的大小
-                HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
             }
             if (Form1.setForm1.ha_wind1_isfangda)
             {
                 fangda("ha_windos_1", false);
-                //重置图像显示区域的大小
-                HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
             }
             if (Form1.setForm1.ha_wind2_isfangda)
             {
                 fangda("ha_windos_2", false);
-                //重置图像显示区域的大小
-                HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
             }
             if (Form1.setForm1.ha_wind3_isfangda)
             {
                 fangda("ha_windos_3", false);
                 //重置图像显示区域的大小
-                HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
+                //HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width, Form1.setForm1.ha_windos_box.Height);
             }
         }
         /// <summary>
