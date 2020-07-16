@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Management;
 
 
 /*--------------------------------待完善BUG----------------------------------
@@ -61,35 +62,36 @@ namespace Vision_inspection
             //将当前窗体实例复制给全局常量Form 这样其他类才能更改控件属性
             setForm1 = this;
 
-            //Get_imgs.Connect_camera_0();
-
-
-            HTuple camera_list = 0;
-            camera_list = Get_imgs.Get_camera_list();
-            for (int i = 0; i < camera_list.Length; i++)
-            {
-                switch (i)
-                {
-                    case 0:
-                        //MessageBox.Show(camera_list.Length.ToString());
-                        Thread thread_0 = new Thread(Get_imgs.Connect_camera_0);
-                        thread_0.IsBackground = true;
-                        thread_0.Start();
-                        break;
-                    case 1:
-                        MessageBox.Show("000");
-                        break;
-                    default:
-                        MessageBox.Show("打开相机出错！");
-                        break;
-                }
-            }
+            Get_imgs.Connect_camera_0();
+            Get_imgs.Get_camera_list();
+            Get_imgs.Get_images(Camera_Handle_0, ha_windowsHandle_0);
+            /*     
+                        HTuple camera_list = 0;
+                        camera_list = Get_imgs.Get_camera_list();
+                        for (int i = 0; i < camera_list.Length; i++)
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    //MessageBox.Show(camera_list.Length.ToString());
+                                    Thread thread_0 = new Thread(Get_imgs.Connect_camera_0);
+                                    thread_0.IsBackground = true;
+                                    thread_0.Start();
+                                    break;
+                                case 1:
+                                    MessageBox.Show("000");
+                                    break;
+                                default:
+                                    MessageBox.Show("打开相机出错！");
+                                    break;
+                            }
+                        }*/
 
         }
         //--------------------------------------定时器-----------------------------------
         private void timer_0_Tick(object sender, EventArgs e)
         {
-            Get_imgs.Get_images(Camera_Handle_0, ha_windowsHandle_0);
+           // Get_imgs.Get_images(Camera_Handle_0, ha_windowsHandle_0);
         }
 
         private void timer_1_Tick(object sender, EventArgs e)
@@ -108,7 +110,6 @@ namespace Vision_inspection
         {
 
 
-            label8.Text = ha_isfangda.ToString();
             //获取日期+时间
             date_time.Text = DateTime.Now.ToString();
         }
@@ -121,6 +122,12 @@ namespace Vision_inspection
 
         //------------------------------自定义鼠标拖拽移动窗体-------------------------------------
         int startX = 0, StartY = 0;
+
+        private void camera_set_0_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("0");
+        }
+
         private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)   //判断是否按下鼠标左键
@@ -211,29 +218,29 @@ namespace Vision_inspection
         private void ha_windos_0_HMouseUp(object sender, HMouseEventArgs e)
         {
             //获取当前控件的name
-            HWindowControl ha_windows = sender as HWindowControl;
-            ha_isfangda = Windows_change.fangda(ha_windows.Name, ha_isfangda);
+/*            HWindowControl ha_windows = sender as HWindowControl;
+            ha_isfangda = Windows_change.fangda(ha_windows.Name, ha_isfangda);*/
         }
 
         private void ha_windos_1_HMouseUp(object sender, HMouseEventArgs e)
         {
             //获取当前控件的name
-            HWindowControl ha_windows = sender as HWindowControl;
-            ha_isfangda = Windows_change.fangda(ha_windows.Name, ha_isfangda);
+/*            HWindowControl ha_windows = sender as HWindowControl;
+            ha_isfangda = Windows_change.fangda(ha_windows.Name, ha_isfangda);*/
         }
 
         private void ha_windos_2_HMouseUp(object sender, HMouseEventArgs e)
         {
             //获取当前控件的name
-            HWindowControl ha_windows = sender as HWindowControl;
-            ha_isfangda = Windows_change.fangda(ha_windows.Name, ha_isfangda);
+/*            HWindowControl ha_windows = sender as HWindowControl;
+            ha_isfangda = Windows_change.fangda(ha_windows.Name, ha_isfangda);*/
         }
 
         private void ha_windos_3_HMouseUp(object sender, HMouseEventArgs e)
         {
             //获取当前控件的name
-            HWindowControl ha_windows = sender as HWindowControl;
-            ha_isfangda = Windows_change.fangda(ha_windows.Name, ha_isfangda);
+/*            HWindowControl ha_windows = sender as HWindowControl;
+            ha_isfangda = Windows_change.fangda(ha_windows.Name, ha_isfangda);*/
         }
 
 

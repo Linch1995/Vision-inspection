@@ -40,8 +40,8 @@ namespace Vision_inspection
             Form1.setForm1.ha_windos_2.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
             Form1.setForm1.ha_windos_3.Height = Form1.setForm1.ha_windos_box.Height / 2 - 1;
             //重置图像显示区域的大小
-            HOperatorSet.SetWindowExtents(HDevWindowStack.GetActive(), 0, 0, Form1.setForm1.ha_windos_box.Width / 2 - 3, Form1.setForm1.ha_windos_box.Height / 2 - 1);
-            
+            HOperatorSet.SetWindowExtents(Form1.setForm1.ha_windos_0.HalconWindow, 0, 0, Form1.setForm1.ha_windos_box.Width / 2 - 3, Form1.setForm1.ha_windos_box.Height / 2 - 1);
+
             //主窗口最大化时判断四个显示窗口有没有被点击放大，如其中一个被放大，
             //那么主窗口最大化后调用dangda（）方法也将其放大，并改变显示区域的大小
             if (Form1.setForm1.ha_wind0_isfangda)

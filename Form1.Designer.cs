@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             "000",
@@ -45,7 +46,6 @@
             "",
             "003",
             "https://www.baidu.com/"}, 7);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ha_windos_0 = new HalconDotNet.HWindowControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ha_windos_1 = new HalconDotNet.HWindowControl();
@@ -54,9 +54,16 @@
             this.camera_set = new System.Windows.Forms.TabControl();
             this.camera_set_init = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.camera_set_3 = new System.Windows.Forms.Label();
+            this.camera_set_2 = new System.Windows.Forms.Label();
+            this.camera_set_1 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.camera_set_0 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -86,23 +93,16 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.camera_set_1 = new System.Windows.Forms.Label();
-            this.camera_set_2 = new System.Windows.Forms.Label();
-            this.camera_set_3 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.timer_0 = new System.Windows.Forms.Timer(this.components);
             this.timer_1 = new System.Windows.Forms.Timer(this.components);
             this.timer_2 = new System.Windows.Forms.Timer(this.components);
             this.timer_3 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.camera_set.SuspendLayout();
             this.camera_set_init.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.camera_set_set.SuspendLayout();
@@ -113,9 +113,6 @@
             this.toolStrip1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
             this.ha_windos_box.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // ha_windos_0
@@ -213,9 +210,7 @@
             this.groupBox1.Controls.Add(this.pictureBox8);
             this.groupBox1.Controls.Add(this.pictureBox7);
             this.groupBox1.Controls.Add(this.pictureBox6);
-            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.camera_set_0);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(1, 3);
@@ -227,14 +222,101 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "设备列表";
             // 
-            // label10
+            // label15
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(134, 68);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 14);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "label10";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(17, 135);
+            this.label15.Margin = new System.Windows.Forms.Padding(0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 14);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "[0] HD WebCam";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(17, 101);
+            this.label14.Margin = new System.Windows.Forms.Padding(0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 14);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "[0] HD WebCam";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(17, 68);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 14);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "[0] HD WebCam";
+            // 
+            // camera_set_3
+            // 
+            this.camera_set_3.AutoSize = true;
+            this.camera_set_3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.camera_set_3.Location = new System.Drawing.Point(216, 137);
+            this.camera_set_3.Name = "camera_set_3";
+            this.camera_set_3.Size = new System.Drawing.Size(65, 12);
+            this.camera_set_3.TabIndex = 9;
+            this.camera_set_3.Text = "更多设置>>";
+            // 
+            // camera_set_2
+            // 
+            this.camera_set_2.AutoSize = true;
+            this.camera_set_2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.camera_set_2.Location = new System.Drawing.Point(216, 103);
+            this.camera_set_2.Name = "camera_set_2";
+            this.camera_set_2.Size = new System.Drawing.Size(65, 12);
+            this.camera_set_2.TabIndex = 8;
+            this.camera_set_2.Text = "更多设置>>";
+            // 
+            // camera_set_1
+            // 
+            this.camera_set_1.AutoSize = true;
+            this.camera_set_1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.camera_set_1.Location = new System.Drawing.Point(216, 70);
+            this.camera_set_1.Name = "camera_set_1";
+            this.camera_set_1.Size = new System.Drawing.Size(65, 12);
+            this.camera_set_1.TabIndex = 7;
+            this.camera_set_1.Text = "更多设置>>";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(0, 130);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(17, 19);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(-1, 96);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(17, 19);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(0, 63);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(17, 19);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 4;
+            this.pictureBox6.TabStop = false;
             // 
             // camera_set_0
             // 
@@ -248,15 +330,7 @@
             this.camera_set_0.TabIndex = 2;
             this.camera_set_0.Text = "更多设置>>";
             this.camera_set_0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(134, 39);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 14);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "label8";
+            this.camera_set_0.Click += new System.EventHandler(this.camera_set_0_Click);
             // 
             // pictureBox1
             // 
@@ -376,7 +450,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(285, 224);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "第三步";
+            this.tabPage3.Text = "其他";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label6
@@ -529,7 +603,6 @@
             // ha_windos_box
             // 
             this.ha_windos_box.BackColor = System.Drawing.SystemColors.Window;
-            this.ha_windos_box.Controls.Add(this.label1);
             this.ha_windos_box.Controls.Add(this.ha_windos_box_info);
             this.ha_windos_box.Controls.Add(this.ha_windos_3);
             this.ha_windos_box.Controls.Add(this.ha_windos_2);
@@ -593,102 +666,6 @@
             this.columnHeader3.Text = "扫描结果";
             this.columnHeader3.Width = 200;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(0, 63);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(17, 19);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(-1, 96);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(17, 19);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 5;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(0, 130);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(17, 19);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 6;
-            this.pictureBox8.TabStop = false;
-            // 
-            // camera_set_1
-            // 
-            this.camera_set_1.AutoSize = true;
-            this.camera_set_1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.camera_set_1.Location = new System.Drawing.Point(216, 70);
-            this.camera_set_1.Name = "camera_set_1";
-            this.camera_set_1.Size = new System.Drawing.Size(65, 12);
-            this.camera_set_1.TabIndex = 7;
-            this.camera_set_1.Text = "更多设置>>";
-            // 
-            // camera_set_2
-            // 
-            this.camera_set_2.AutoSize = true;
-            this.camera_set_2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.camera_set_2.Location = new System.Drawing.Point(216, 103);
-            this.camera_set_2.Name = "camera_set_2";
-            this.camera_set_2.Size = new System.Drawing.Size(65, 12);
-            this.camera_set_2.TabIndex = 8;
-            this.camera_set_2.Text = "更多设置>>";
-            // 
-            // camera_set_3
-            // 
-            this.camera_set_3.AutoSize = true;
-            this.camera_set_3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.camera_set_3.Location = new System.Drawing.Point(216, 137);
-            this.camera_set_3.Name = "camera_set_3";
-            this.camera_set_3.Size = new System.Drawing.Size(65, 12);
-            this.camera_set_3.TabIndex = 9;
-            this.camera_set_3.Text = "更多设置>>";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(17, 68);
-            this.label13.Margin = new System.Windows.Forms.Padding(0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 14);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "[0] HD WebCam";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(17, 101);
-            this.label14.Margin = new System.Windows.Forms.Padding(0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 14);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "[0] HD WebCam";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(17, 135);
-            this.label15.Margin = new System.Windows.Forms.Padding(0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 14);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "[0] HD WebCam";
-            // 
             // timer_0
             // 
             this.timer_0.Tick += new System.EventHandler(this.timer_0_Tick);
@@ -704,15 +681,6 @@
             // timer_3
             // 
             this.timer_3.Tick += new System.EventHandler(this.timer_3_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
             // 
             // Form1
             // 
@@ -737,6 +705,9 @@
             this.camera_set_init.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.camera_set_set.ResumeLayout(false);
@@ -752,9 +723,6 @@
             this.StatusStrip1.PerformLayout();
             this.ha_windos_box.ResumeLayout(false);
             this.ha_windos_box.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -784,9 +752,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label camera_set_0;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.Panel ha_windos_box;
         public System.Windows.Forms.TabControl camera_set;
@@ -813,7 +779,6 @@
         public System.Windows.Forms.Timer timer_1;
         public System.Windows.Forms.Timer timer_2;
         public System.Windows.Forms.Timer timer_3;
-        public System.Windows.Forms.Label label1;
     }
 }
 

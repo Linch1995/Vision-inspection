@@ -16,19 +16,20 @@ namespace Vision_inspection
             //获取当前设备相机列表
             HOperatorSet.InfoFramegrabber("DirectShow", "device", out hv_Information, out camera_dirlist);
             //加载设备列表
-            /*            for (int i = 0; i < camera_dirlist.Length; i++)
-                        {
-
-
-                        }*/
+            for (int i = 0; i < camera_dirlist.Length; i++)
+            {
+                //MessageBox.Show(camera_dirlist[0].ToString());
+                
+            }
             return camera_dirlist;
 
         }
+
         public static void Open_camera_0(out HTuple Camera_Handle_0, out HTuple ha_windowsHandle_0)
         {
             //打开相机
             //HOperatorSet.OpenFramegrabber("DirectShow", 1, 1, 0, 0, 0, 0, "default", 8, "gray", -1, "false", "default", "[0]", 0, -1, out Camera_Handle_0);
-            HOperatorSet.OpenFramegrabber("File", 1, 1, 0, 0, 0, 0, "default", -1, "default",-1, "false", "D:/桌面/微信截图_20200630164048.png", "default", 1, -1, out Camera_Handle_0);
+            HOperatorSet.OpenFramegrabber("File", 1, 1, 0, 0, 0, 0, "default", -1, "default",-1, "false", "D:/桌面/222.jpg", "default", 1, -1, out Camera_Handle_0);
             HOperatorSet.GrabImageStart(Camera_Handle_0, -1);
             //设置窗体背景颜色
             HOperatorSet.SetWindowAttr("background_color", "white");
@@ -96,10 +97,11 @@ namespace Vision_inspection
             HOperatorSet.GrabImageAsync(out ho_Image_0, Camera_Handle_0, -1);
             //获取图像大小
             HOperatorSet.GetImageSize(ho_Image_0, out img_width_0, out img_height_0);
+            int img_height = ( Form1.setForm1.ha_windos_0.Width * img_height_0) / img_width_0;
             if (HDevWindowStack.IsOpen())
             {
                 //对图像进行缩放以适应窗体大小
-                HOperatorSet.SetPart(ha_windowsHandle_0, 0, 50, img_width_0 - 160, img_height_0);
+                HOperatorSet.SetPart(ha_windowsHandle_0, -20, 0, img_height_0 + 20 , img_width_0);
                 //显示图像
                 HOperatorSet.DispObj(ho_Image_0, ha_windowsHandle_0);
             }
