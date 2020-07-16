@@ -18,8 +18,7 @@ namespace Vision_inspection
             ho_Image.Dispose();
             HOperatorSet.GrabImageAsync(out ho_Image, hv_AcqHandle, -1);
             ho_SymbolXLDs.Dispose();
-            HOperatorSet.FindDataCode2d(ho_Image, out ho_SymbolXLDs, hv_DataCodeHandle,
-                new HTuple(), new HTuple(), out hv_ResultHandles, out hv_DecodedDataStrings);
+            HOperatorSet.FindDataCode2d(ho_Image, out ho_SymbolXLDs, hv_DataCodeHandle,new HTuple(), new HTuple(), out hv_ResultHandles, out hv_DecodedDataStrings);
             if (HDevWindowStack.IsOpen())
             {
                 HOperatorSet.DispObj(ho_Image, HDevWindowStack.GetActive());

@@ -88,15 +88,11 @@
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.date_time = new System.Windows.Forms.ToolStripStatusLabel();
             this.ha_windos_box = new System.Windows.Forms.Panel();
-            this.ha_windos_box_info = new System.Windows.Forms.Label();
+            this.ha_windos0_info = new System.Windows.Forms.Label();
             this.info_list = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.timer_0 = new System.Windows.Forms.Timer(this.components);
-            this.timer_1 = new System.Windows.Forms.Timer(this.components);
-            this.timer_2 = new System.Windows.Forms.Timer(this.components);
-            this.timer_3 = new System.Windows.Forms.Timer(this.components);
             this.camera_set.SuspendLayout();
             this.camera_set_init.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -603,7 +599,7 @@
             // ha_windos_box
             // 
             this.ha_windos_box.BackColor = System.Drawing.SystemColors.Window;
-            this.ha_windos_box.Controls.Add(this.ha_windos_box_info);
+            this.ha_windos_box.Controls.Add(this.ha_windos0_info);
             this.ha_windos_box.Controls.Add(this.ha_windos_3);
             this.ha_windos_box.Controls.Add(this.ha_windos_2);
             this.ha_windos_box.Controls.Add(this.ha_windos_0);
@@ -614,14 +610,14 @@
             this.ha_windos_box.Size = new System.Drawing.Size(607, 505);
             this.ha_windos_box.TabIndex = 10;
             // 
-            // ha_windos_box_info
+            // ha_windos0_info
             // 
-            this.ha_windos_box_info.AutoSize = true;
-            this.ha_windos_box_info.Location = new System.Drawing.Point(14, 17);
-            this.ha_windos_box_info.Name = "ha_windos_box_info";
-            this.ha_windos_box_info.Size = new System.Drawing.Size(41, 12);
-            this.ha_windos_box_info.TabIndex = 4;
-            this.ha_windos_box_info.Text = "label1";
+            this.ha_windos0_info.AutoSize = true;
+            this.ha_windos0_info.Location = new System.Drawing.Point(3, 3);
+            this.ha_windos0_info.Name = "ha_windos0_info";
+            this.ha_windos0_info.Size = new System.Drawing.Size(41, 12);
+            this.ha_windos0_info.TabIndex = 4;
+            this.ha_windos0_info.Text = "label1";
             // 
             // info_list
             // 
@@ -666,22 +662,6 @@
             this.columnHeader3.Text = "扫描结果";
             this.columnHeader3.Width = 200;
             // 
-            // timer_0
-            // 
-            this.timer_0.Tick += new System.EventHandler(this.timer_0_Tick);
-            // 
-            // timer_1
-            // 
-            this.timer_1.Tick += new System.EventHandler(this.timer_1_Tick);
-            // 
-            // timer_2
-            // 
-            this.timer_2.Tick += new System.EventHandler(this.timer_2_Tick);
-            // 
-            // timer_3
-            // 
-            this.timer_3.Tick += new System.EventHandler(this.timer_3_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -695,7 +675,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
@@ -756,7 +736,7 @@
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.Panel ha_windos_box;
         public System.Windows.Forms.TabControl camera_set;
-        public System.Windows.Forms.Label ha_windos_box_info;
+        public System.Windows.Forms.Label ha_windos0_info;
         public System.Windows.Forms.ListView info_list;
         public HalconDotNet.HWindowControl ha_windos_0;
         public HalconDotNet.HWindowControl ha_windos_1;
@@ -775,10 +755,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.ColumnHeader columnHeader1;
-        public System.Windows.Forms.Timer timer_0;
-        public System.Windows.Forms.Timer timer_1;
-        public System.Windows.Forms.Timer timer_2;
-        public System.Windows.Forms.Timer timer_3;
     }
 }
 

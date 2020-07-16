@@ -65,51 +65,15 @@ namespace Vision_inspection
             Get_imgs.Connect_camera_0();
             Get_imgs.Get_camera_list();
             Get_imgs.Get_images(Camera_Handle_0, ha_windowsHandle_0);
-            /*     
-                        HTuple camera_list = 0;
-                        camera_list = Get_imgs.Get_camera_list();
-                        for (int i = 0; i < camera_list.Length; i++)
-                        {
-                            switch (i)
-                            {
-                                case 0:
-                                    //MessageBox.Show(camera_list.Length.ToString());
-                                    Thread thread_0 = new Thread(Get_imgs.Connect_camera_0);
-                                    thread_0.IsBackground = true;
-                                    thread_0.Start();
-                                    break;
-                                case 1:
-                                    MessageBox.Show("000");
-                                    break;
-                                default:
-                                    MessageBox.Show("打开相机出错！");
-                                    break;
-                            }
-                        }*/
+
 
         }
         //--------------------------------------定时器-----------------------------------
-        private void timer_0_Tick(object sender, EventArgs e)
-        {
-           // Get_imgs.Get_images(Camera_Handle_0, ha_windowsHandle_0);
-        }
 
-        private void timer_1_Tick(object sender, EventArgs e)
-        {
-            Get_imgs.Get_images(Camera_Handle_1, ha_windowsHandle_1);
-        }
-        private void timer_2_Tick(object sender, EventArgs e)
-        {
-            Get_imgs.Get_images(Camera_Handle_2, ha_windowsHandle_2);
-        }
-        private void timer_3_Tick(object sender, EventArgs e)
-        {
-            Get_imgs.Get_images(Camera_Handle_3, ha_windowsHandle_3);
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-
+            Get_imgs.Get_images(Camera_Handle_0, ha_windowsHandle_0);
             //获取日期+时间
             date_time.Text = DateTime.Now.ToString();
         }
